@@ -45,8 +45,10 @@ public class DBAccess extends SQLiteOpenHelper {
 	Cursor getData(String whereClause, String orderBy) {
 		SQLiteDatabase db = this.getReadableDatabase();
 		Cursor c = db.query("todolist", new String[] { "_id", "date", "time",
-				"title" }, whereClause, null, null, null, orderBy);
+				"title" }, whereClause, null, null,null,orderBy,"5");
 		return c;
+		
+//		public Cursor query (String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy, String limit)
 	}
 
 }

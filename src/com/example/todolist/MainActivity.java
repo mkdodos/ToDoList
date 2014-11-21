@@ -26,16 +26,17 @@ public class MainActivity extends ActionBarActivity {
 
 	@Override
 	protected void onResume() {
-		Cursor c=access.getData("date>=strftime('%Y-%m-%d','now')", "date,time");
-		if(adapter==null){
-			adapter=new SimpleCursorAdapter(this,R.layout.list_item,c
-					,new String[]{"date","time","title"},new int[]{R.id.tvDate,R.id.tvTime,R.id.tvTitle});
+		Cursor c = access.getData("date>=strftime('%Y-%m-%d','now')",
+				"date desc,time");
+		if (adapter == null) {
+			adapter = new SimpleCursorAdapter(this, R.layout.list_item, c,
+					new String[] { "date", "time", "title" }, new int[] {
+							R.id.tvDate, R.id.tvTime, R.id.tvTitle });
 			lv.setAdapter(adapter);
-		}else{
+		} else {
 			adapter.changeCursor(c);
 		}
-		super.onResume();	
-
+		super.onResume();
 	}
 
 	@Override
