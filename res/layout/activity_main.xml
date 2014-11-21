@@ -15,10 +15,10 @@
             android:paddingTop="10px" >
 
             <TextView
-                android:id="@+id/status"
+                android:id="@+id/tvHeader"
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
-                android:layout_span="2"
+                android:layout_span="1"
                 android:text="新增表單"
                 android:textColor="#890000"
                 android:textSize="15sp"
@@ -36,11 +36,13 @@
             </TextView>
 
             <EditText
-                android:id="@+id/screenName"
+                android:id="@+id/etDate"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="0dip"
                 android:layout_marginRight="20dip"
-                android:layout_weight="1" >
+                android:layout_weight="1"               
+                android:singleLine="true"
+                 >
             </EditText>
         </TableRow>
 
@@ -56,11 +58,13 @@
             </TextView>
 
             <EditText
-                android:id="@+id/password"
+                android:id="@+id/etTime"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="0dip"
                 android:layout_marginRight="20dip"
-                android:layout_weight="1" >
+                android:layout_weight="1"                 
+                android:singleLine="true"
+                >
             </EditText>
         </TableRow>
         
@@ -80,7 +84,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="0dip"
                 android:layout_marginRight="20dip"
-                android:layout_weight="1" >
+                android:layout_weight="1" 
+                android:text="好"
+                android:singleLine="true"
+                >
             </EditText>
         </TableRow>
 
@@ -89,12 +96,12 @@
             android:gravity="center" >
 
             <Button
-                android:id="@+id/save"
+                android:id="@+id/btnAdd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="2"
                 android:clickable="true"
-                android:text="Submit" >
+                android:text="新增" >
             </Button>
         </TableRow>
         
@@ -117,82 +124,6 @@
         </TableRow>
     </TableLayout>
 
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <TableRow
-            android:id="@+id/tableRow1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp" >
-
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="日期"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <EditText
-                android:id="@+id/etDate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="text" >
-            </EditText>
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tableRow2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp" >
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="時間"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <EditText
-                android:id="@+id/etTime"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/etDate"
-                android:ems="10"
-                android:inputType="text" >
-            </EditText>
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tableRow3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp" >
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="標題"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <EditText
-                android:id="@+id/productQuantity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="number" />
-
-            <Button
-                android:id="@+id/btnAdd"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tvTitle"
-                android:text="新增" />
-        </TableRow>
-    </TableLayout>
+    
 
 </LinearLayout>
